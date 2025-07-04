@@ -99,7 +99,6 @@ public class GestioneBiblioteca {
                     break;
                 case 2:
                     // stampo tutta la libreria
-                    System.out.println("===BIBLIOTECA===");
                     biblioteca.visualizzaInventario();
                     break;
                 case 3:
