@@ -118,11 +118,13 @@ public class GestioneBiblioteca {
                 case 5:
                     // messaggio di uscita
                     System.out.println("Arrivederci!");
+                    loggato = false;
                     break;
                 default:
                     System.out.println("Scelta non valida..");
                     break;
             }
+
         }
         // chiusura scanner
         myScannerStr.close();
