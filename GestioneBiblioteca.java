@@ -9,8 +9,6 @@ public class GestioneBiblioteca {
         // Inizializzo un utente a null per verificare l'effettivo login dell'utente
         Utente utente = null;
         boolean loggato = false;
-        // dichiaro l'arrayList di risorse
-        ArrayList<Risorsa> risorse = new ArrayList<Risorsa>();
         Biblioteca biblioteca = new Biblioteca("Biblioteca");
 
         // finche l'utente non è loggato gli chiedo di loggarsi o registrarsi
