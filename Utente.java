@@ -8,7 +8,7 @@ public class Utente {
     // Metodi d istanza 
     private String nome;
     private int id;
-    private ArrayList<Risorsa> listaRisorse;
+    private ArrayList<Risorsa> libriPresiInPrestito;
 
     private static int contatore = 0;       // Metodo statico per contare ogni utente creato
 
@@ -16,7 +16,7 @@ public class Utente {
         contatore++;
         this.nome = nome;
         this.id = contatore; 
-        this.listaRisorse = new ArrayList<>();
+        this.libriPresiInPrestito = new ArrayList<>();
     }
 
     // Getters e Setters
@@ -42,9 +42,9 @@ public class Utente {
 
     // Metodo per restituire la risorsa
     public void restituisci(Risorsa risorsa) {
-        if (listaRisorse.contains(risorsa)) {           // Controllo se nella listaRisorse è presente la risorsa passata
+        if (libriPresiInPrestito.contains(risorsa)) {           // Controllo se nella libriPresiInPrestito è presente la risorsa passata
             risorsa.setDisponibile(true);               // imposto disponibilita su true perche viene tolta dalla lista utente
-            listaRisorse.remove(risorsa);
+            libriPresiInPrestito.remove(risorsa);
             System.out.println("Hai restituito: " + risorsa.getTitolo());
         } else {
             System.out.println("Risorsa non presente nella lista.");
@@ -57,7 +57,7 @@ public class Utente {
             if (r.getCodiceIdentificativo() == id) {                   // Controllo per id
                 if (r.isDisponibile()) {
                     r.setDisponibile(false);         // se corrispondesetto la disponibilita su false perche il libro non è piu disponibile
-                    listaRisorse.add(r);             // aggiungo la risorsa alla lista delle risorse prese in prestito             
+                    libriPresiInPrestito.add(r);             // aggiungo la risorsa alla lista delle risorse prese in prestito             
                     System.out.println("Hai preso in prestito: " + r.getTitolo());
                 } else {
                     System.out.println("Risorsa non disponibile.");     // Risorsa non disponibile
