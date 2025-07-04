@@ -9,6 +9,15 @@ public class Biblioteca {
     // Variabili D istanza
     private String nome;
     private ArrayList<Risorsa> listaRisorse;
+
+    public ArrayList<Risorsa> getListaRisorse() {
+        return listaRisorse;
+    }
+
+    public ArrayList<Utente> getListaUtenti() {
+        return listaUtenti;
+    }
+
     private ArrayList<Utente> listaUtenti;
 
     // Costruttore

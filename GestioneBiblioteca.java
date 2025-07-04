@@ -9,8 +9,6 @@ public class GestioneBiblioteca {
         // Inizializzo un utente a null per verificare l'effettivo login dell'utente
         Utente utente = null;
         boolean loggato = false;
-        // dichiaro l'arrayList di Utenti
-        ArrayList<Utente> utenti = new ArrayList<Utente>();
         // dichiaro l'arrayList di risorse
         ArrayList<Risorsa> risorse = new ArrayList<Risorsa>();
         Biblioteca biblioteca = new Biblioteca("Biblioteca");
@@ -110,7 +108,7 @@ public class GestioneBiblioteca {
                     // prendi in prestito un libro
                     System.out.println("Inserisci codice ID: "); // chiedo codice libro
                     int codiceID = myScannerInt.nextInt(); // inizializzo la variabile
-                    utente.prendiInPrestito(risorse, codiceID); // richiamo la funzione
+                    utente.prendiInPrestito(biblioteca.getListaRisorse(), codiceID); // richiamo la funzione
                     break;
                 case 4:
                     // Restituisco libro
